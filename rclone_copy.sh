@@ -26,7 +26,7 @@ rcloneARGS=(
   "--log-file=$LOGFILE"
   "--log-level=ERROR"
   "--stats-log-level=ERROR"
-  "--no-check-certificate"
+#  "--no-check-certificate"
 )
 
 rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}"
