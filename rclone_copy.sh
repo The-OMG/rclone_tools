@@ -22,8 +22,17 @@ rcloneARGS=(
   "--checksum"
   "--drive-upload-cutoff=64m"
   "--low-level-retries=10"
+<<<<<<< HEAD
+=======
+  "--log-file=$LOGFILE"
+  "--log-level=ERROR"
+>>>>>>> 2af9fedb28307455b04f3f1cb2934df14d649d02
   "--stats-log-level=ERROR"
   "--no-check-certificate"
 )
 
+<<<<<<< HEAD
 rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}" | tee -a "$LOGFILE"
+=======
+rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}" | tee -a
+>>>>>>> 2af9fedb28307455b04f3f1cb2934df14d649d02
