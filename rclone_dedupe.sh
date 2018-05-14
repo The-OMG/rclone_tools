@@ -12,7 +12,7 @@ rcloneARGS=(
   "--drive-chunk-size=64m"
   "--fast-list"
   "--log-file=$LOGFILE"
-  "--log-level=error"
+  "--log-level=ERROR"
   "--low-level-retries=10"
   "--min-size=0"
   "--no-check-certificate"
