@@ -14,7 +14,7 @@ rcloneARGS=(
   "--drive-upload-cutoff=64m"
   "--fast-list"
   "--log-file=$LOGFILE"
-  "--log-level=error"
+  "--log-level=ERROR"
   "--low-level-retries=10"
   "--low-level-retries=20"
   "--min-size=0"
