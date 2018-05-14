@@ -5,6 +5,7 @@
 
 REMOTE="$1"
 GDRIVE_REMOTE="$2"
+LOGFILE="$HOME/logs/$(date +"%Y%m%d_%H%M%S")-rclone_copy.log"
 rcloneARGS=(
   "--transfers=8"
   "--checkers=16"
@@ -21,11 +22,10 @@ rcloneARGS=(
   "--checksum"
   "--drive-upload-cutoff=64m"
   "--low-level-retries=10"
-  "--drive-use-trash"
-  "--log-file=$HOME/logs/rclone_copy-$REMOTE.log"
+  "--log-file=$LOGFILE"
   "--log-level=ERROR"
   "--stats-log-level=ERROR"
   "--no-check-certificate"
 )
 
-rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}"
+rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}" | tee -a
