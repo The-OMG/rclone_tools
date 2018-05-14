@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-#usage: create a bash script that will call this script from github.
+# Usage: create a bash script that will call this script from github.
+# Example: curl -s https://raw.githubusercontent.com/The-OMG/rclone_tools/master/rclone_copy.sh | bash /dev/stdin httpremote: mygsuite:
 
 REMOTE="$1"
 GDRIVE_REMOTE="$2"
@@ -22,4 +23,4 @@ rcloneARGS=(
   "--low-level-retries=10"
 )
 
-rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS{@}}"
+rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}"
