@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# Purpose: Use the same settings every time when deduping with rclone.
-
-curl -s https://raw.githubusercontent.com/The-OMG/rclone_tools/master/rclone_dedupe.sh | bash /dev/stdin "$1"

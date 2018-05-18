@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-# Purpose: Use the same settings every time when copying with rclone.
+# Purpose: Use the latest and greatest version of this app every time.
 
 curl -s https://raw.githubusercontent.com/The-OMG/rclone_tools/master/rclone_sync.sh | bash /dev/stdin "$1" "$2"
