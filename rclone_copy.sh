@@ -23,6 +23,7 @@ _Main() {
   esac
 
   rcloneARGS=(
+    "--checkers=8"
     "--contimeout=60s"
     "--drive-chunk-size=$driveChunkSize"
     "--drive-upload-cutoff=$driveChunkSize"
@@ -39,10 +40,9 @@ _Main() {
     "--timeout=300s"
     "--tpslimit=6"
     "--track-renames"
-    # "--checkers=8"
+    "--transfers=8"
     # "--checksum"
     # "--log-file=$LOGFILE"
-    # "--transfers=8"
   )
 
   rclone copy "$REMOTE" "$GDRIVE_REMOTE" "${rcloneARGS[@]}"
