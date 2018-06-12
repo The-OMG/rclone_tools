@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage: create a bash script that will call this script from github.
-# Example: curl -s https://raw.githubusercontent.com/The-OMG/rclone_tools/master/rclone_copy.sh | bash /dev/stdin mygsuite:
+# Example: curl -s https://raw.githubusercontent.com/The-OMG/rclone_tools/master/rclone_dedupe.sh | bash /dev/stdin mygsuite:
 
 REMOTE="$1"
 LOGFILE="${HOME}/logs/$(date +"%d-%m-%Y_%H%M%S")-rclone_copy.log"
